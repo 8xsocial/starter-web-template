@@ -15,7 +15,7 @@ Check `package.json`'s `"name"` field. If it's anything other than `template-web
 
 Ask, don't assume — this determines whether there's a cleanup step needed.
 
-- **Right way: GitHub's "Use this template" button, or `gh repo create <name> --template <org>/template-web`.** This produces one fresh commit with zero connection to this template's own history. Prefer this over both alternatives below.
+- **Right way: GitHub's "Use this template" button, or `gh repo create <name> --template <org>/starter-web-template`.** This produces one fresh commit with zero connection to this template's own history. Prefer this over both alternatives below.
 - **A plain `git clone` + manually repointing `origin`.** This drags along this template repo's _entire_ own scaffolding history forever — every commit this template accumulates over time — showing up in `git blame`/`git log` for files nobody in the new project ever touched. It can't be undone later without discarding history.
 - **A fork.** The wrong tool here — forks exist to contribute back to the same upstream project via PRs, which will never happen between an independent new project and this template. GitHub will keep nudging toward a relationship that shouldn't exist.
 

@@ -22,14 +22,14 @@ test('findTemplateLeaks names only what must not be tracked', () => {
 })
 
 test('the template is told apart from a project generated from it', () => {
-	assert.equal(isTemplateRepository({ githubRepository: '8xsocial/template-web' }), true)
+	assert.equal(isTemplateRepository({ githubRepository: '8xsocial/starter-web-template' }), true)
 	assert.equal(isTemplateRepository({ githubRepository: 'pair-7/my-app' }), false)
 	assert.equal(
-		isTemplateRepository({ originUrl: 'git@github.com:8xsocial/template-web.git' }),
+		isTemplateRepository({ originUrl: 'git@github.com:8xsocial/starter-web-template.git' }),
 		true
 	)
 	assert.equal(
-		isTemplateRepository({ originUrl: 'https://github.com/8xsocial/template-web' }),
+		isTemplateRepository({ originUrl: 'https://github.com/8xsocial/starter-web-template' }),
 		true
 	)
 	assert.equal(isTemplateRepository({ originUrl: 'https://github.com/pair-7/my-app.git' }), false)

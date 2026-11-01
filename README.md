@@ -42,7 +42,7 @@ belong back here; project-specific choices don't.
 ## Project structure
 
 ```
-template-web/
+starter-web-template/
 ├── .claude/skills/          Claude Code skills — see "Skills" below
 ├── .claude-logs/            tracked (not gitignored) — AI session transcripts ship with the branch
 ├── .github/workflows/       ci.yml, deploy-migrations.yml, claude-code-review.yml
@@ -76,7 +76,7 @@ template-web/
 ## Getting a new project from this template
 
 Use GitHub's **template repository** feature — `gh repo create <new-name>
---template 8xsocial/template-web`, or the "Use this template" button on
+--template 8xsocial/starter-web-template`, or the "Use this template" button on
 the repo page. That produces one fresh commit with no connection to this
 repo's history.
 
@@ -233,7 +233,7 @@ Never run a manual production deploy command — CI/CD handles it (see
 | `pnpm test:e2e`                            | Playwright — boots the app itself unless `E2E_BASE_URL` is set                                                                                                                  |
 | `pnpm check:env`                           | Fails if a `process.env.X` in `src/` isn't declared in `.env.example` + `src/lib/env.ts`                                                                                        |
 | `pnpm check:standards`                     | Fails if a standard in `docs/STANDARDS.md` is unwired — rules index, commit hook, CI gates, effective lint/tsc config, tracked-file hygiene. `--root <dir>` audits another repo |
-| `pnpm check:template`                      | Fails if the template's own repository (`8xsocial/template-web`) tracks a session log or agent worktree. Passes trivially in a project generated from it                        |
+| `pnpm check:template`                      | Fails if the template's own repository (`8xsocial/starter-web-template`) tracks a session log or agent worktree. Passes trivially in a project generated from it                |
 | `pnpm check:rls`                           | Reads `pg_class` on the database `DATABASE_URL` points at: every table has RLS enabled, no policies, never forced. Runs at the end of CI's migrations job                       |
 | `pnpm prisma:generate`                     | Regenerate the Prisma client after a schema change                                                                                                                              |
 | `pnpm prisma:migrate:generate:check`       | Dry-run what CI's migration generator would write, without writing it                                                                                                           |

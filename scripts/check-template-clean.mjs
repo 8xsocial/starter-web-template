@@ -22,7 +22,7 @@ import { resolve } from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
 
-export const TEMPLATE_REPOSITORY = '8xsocial/template-web'
+export const TEMPLATE_REPOSITORY = '8xsocial/starter-web-template'
 
 const LOG_DIRS = ['.claude-logs', '.codex-logs']
 // What a log directory may hold in the template: the note that explains it,
