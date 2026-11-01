@@ -61,7 +61,7 @@ here.
 Copy it from the template instead:
 
 ```bash
-git clone --depth 1 https://github.com/8xsocial/template-web.git /tmp/template-web
+git clone --depth 1 https://github.com/8xsocial/starter-web-template.git /tmp/template-web
 ```
 
 Bring over, adapting import paths and nothing else:
